@@ -1,48 +1,62 @@
 <template>
-    <header class="bg-black text-white py-4">
-      <div class="container mx-auto flex justify-between items-center">
-        <div class="logo">
-          <nuxt-link to="/">
-            <!-- Hier kommt das Logo von starways -->
-            <img src="#" alt="Starways" class="h-8">
-          </nuxt-link>
-        </div>
-        <nav class="hidden md:block">
-          <ul class="flex space-x-4">
-            <li><nuxt-link to="#reiseziele">Reiseziele</nuxt-link></li>
-            <li><nuxt-link to="#ueber-uns">Über uns</nuxt-link></li>
-            <li><nuxt-link to="#kontakt">Kontakt</nuxt-link></li>
-          </ul>
-        </nav>
-        <div class="cta">
-          <nuxt-link to="#buchung" class="bg-accent hover:bg-opacity-75 text-white font-bold py-2 px-4 rounded">Jetzt buchen</nuxt-link>
-        </div>
-        <!-- Mobile navigation button (for small screens) -->
-        <div class="block md:hidden">
-          <!-- Hier könntest du ein mobiles Menü-Icon hinzufügen -->
-          <!-- Zum Beispiel: -->
-          <!-- <i class="fa fa-bars"></i> -->
-        </div>
-      </div>
-    </header>
-  </template>
-  
-  <script>
-  export default {
-    // Hier könntest du die Props, Data, Methods usw. definieren, die du benötigst
+  <header class="bg-[#110d0f] text-[#d2cfcd] p-4 flex justify-between items-center">
+    <div class="text-2xl font-bold">
+      <nuxt-link to="/">Starways</nuxt-link>
+    </div>
+    <nav class="hidden md:flex space-x-8">
+      <nuxt-link to="#reiseziele" class="hover:text-white">Reiseziele</nuxt-link>
+      <nuxt-link to="#uber-uns" class="hover:text-white">Über uns</nuxt-link>
+      <nuxt-link to="#kontakt" class="hover:text-white">Kontakt</nuxt-link>
+    </nav>
+    <div class="hidden md:block">
+      <nuxt-link
+        to="#buchung"
+        class="border border-[#d2cfcd] text-[#d2cfcd] px-4 py-2 hover:border-white hover:text-white"
+      >
+        Jetzt buchen
+      </nuxt-link>
+    </div>
+    <div class="md:hidden">
+      <button @click="toggleMenu" class="focus:outline-none">
+        <svg class="w-6 h-6 text-[#d2cfcd]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+      </button>
+    </div>
+    <div v-if="menuOpen" class="absolute top-0 left-0 w-full bg-[#110d0f] text-[#d2cfcd] p-4 flex flex-col space-y-4 md:hidden">
+      <nuxt-link to="#reiseziele" class="hover:text-white" @click="toggleMenu">Reiseziele</nuxt-link>
+      <nuxt-link to="#uber-uns" class="hover:text-white" @click="toggleMenu">Über uns</nuxt-link>
+      <nuxt-link to="#kontakt" class="hover:text-white" @click="toggleMenu">Kontakt</nuxt-link>
+      <nuxt-link
+        to="#buchung"
+        class="border border-[#d2cfcd] text-[#d2cfcd] px-4 py-2 hover:border-white hover:text-white"
+        @click="toggleMenu"
+      >
+        Jetzt buchen
+      </nuxt-link>
+    </div>
+  </header>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      menuOpen: false,
+    };
+  },
+  methods: {
+    toggleMenu() {
+      this.menuOpen = !this.menuOpen;
+    },
+  },
+};
+</script>
+
+<style scoped>
+@media (max-width: 768px) {
+  .nav-hidden {
+    display: none;
   }
-  </script>
-  
-  <style scoped>
-  /* Hier könntest du zusätzliches Styling für den Header hinzufügen */
-  .bg-black {
-    background-color: #19232e;
-  }
-  .text-white {
-    color: #f9f4f8;
-  }
-  .bg-accent {
-    background-color: #b258a9;
-  }
-  </style>
-  
+}
+</style>

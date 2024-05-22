@@ -1,7 +1,7 @@
 <template>
     <div>
       <Hero></Hero>
-      <PlanetCards></PlanetCards>
+      <Planets></Planets>
       <Spaceship></Spaceship>
       <Booking></Booking>
       <Ratings></Ratings>
