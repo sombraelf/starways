@@ -2,11 +2,12 @@
     <div>
       <Hero></Hero>
       <Planets></Planets>
-      <Spaceship></Spaceship>
-      <Booking></Booking>
-      <Ratings></Ratings>
-      <About></About>
-      <Newslettter></Newslettter>
+      <Testimonials></Testimonials>
+      <Faq></Faq>
+      <LastMinute></LastMinute>
+      <Newsletter></Newsletter>
+      <Socials></Socials>
+      <Footer></Footer>
     </div>
     
 </template>
