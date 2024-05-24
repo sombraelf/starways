@@ -3,11 +3,13 @@
       <Hero></Hero>
       <Planets></Planets>
       <Testimonials></Testimonials>
-      <Faq></Faq>
+      <Spaceship></Spaceship>
       <LastMinute></LastMinute>
-      <Newsletter></Newsletter>
+      <About></About>
+      <Faq></Faq>
+      <Contact></Contact>
       <Socials></Socials>
-      <Footer></Footer>
+      <Newsletter></Newsletter>
     </div>
     
 </template>

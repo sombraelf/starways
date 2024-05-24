@@ -3,10 +3,10 @@
     <h1 class="text-4xl md:text-6xl font-bold mb-4">Erleben Sie galaktische Abenteuer</h1>
     <p class="text-lg md:text-2xl mb-8">Reisen Sie zu den Sternen und entdecken Sie neue Welten mit Starways</p>
     <nuxt-link
-      to="#buchung"
+      to="#last-minute-section"
       class="border border-[#d2cfcd] text-[#d2cfcd] px-8 py-4 text-lg hover:border-white hover:text-white"
     >
-      Jetzt buchen
+      Angebote entdecken
     </nuxt-link>
   </section>
 </template>
