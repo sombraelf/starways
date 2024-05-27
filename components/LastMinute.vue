@@ -1,5 +1,5 @@
 <template>
-  <section id="last-minute-section" class="last-minute bg-[#110d0f] text-[#d2cfcd] p-8 z-10">
+  <section id="last-minute-section" class="last-minute bg-[#0d0d0d] text-[#d2cfcd] p-8 z-10">
     <h2 class="text-3xl font-bold text-center mb-8">Last Minute Angebote</h2>
     <div class="relative max-w-4xl mx-auto">
       <div class="overflow-hidden">
@@ -25,7 +25,7 @@
 
     <transition name="fade">
       <div v-if="selectedOffer" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center p-4 z-20">
-        <div class="bg-[#110d0f] p-8 rounded-lg max-w-3xl w-full relative max-h-full overflow-y-auto">
+        <div class="bg-[#0d0d0d] p-8 rounded-lg max-w-3xl w-full relative max-h-full overflow-y-auto">
           <button @click="closeModal" class="absolute top-4 right-4 text-2xl text-white focus:outline-none">&times;</button>
           <h3 class="text-2xl font-bold mb-4">{{ selectedOffer.name }}</h3>
           <img :src="selectedOffer.image" :alt="selectedOffer.name" class="w-full h-64 object-cover mb-4 rounded-lg">
@@ -34,11 +34,11 @@
           <form @submit.prevent="bookTrip">
             <div class="mb-4">
               <label class="block mb-2">Reisedatum:</label>
-              <input type="date" v-model="bookingDetails.date" class="bg-[#110d0f] border border-[#d2cfcd] p-2 w-full">
+              <input type="date" v-model="bookingDetails.date" class="bg-[#0d0d0d] border border-[#d2cfcd] p-2 w-full">
             </div>
             <div class="mb-4">
               <label class="block mb-2">Flugklasse:</label>
-              <select v-model="bookingDetails.class" class="bg-[#110d0f] border border-[#d2cfcd] p-2 w-full" @change="updatePrice">
+              <select v-model="bookingDetails.class" class="bg-[#0d0d0d] border border-[#d2cfcd] p-2 w-full" @change="updatePrice">
                 <option value="Economy">Economy</option>
                 <option value="Business">Business</option>
                 <option value="First Class">First Class</option>
@@ -46,7 +46,7 @@
             </div>
             <div class="mb-4">
               <label class="block mb-2">Anzahl der Reisenden:</label>
-              <input type="number" v-model="bookingDetails.travelers" min="1" class="bg-[#110d0f] border border-[#d2cfcd] p-2 w-full" @input="updatePrice">
+              <input type="number" v-model="bookingDetails.travelers" min="1" class="bg-[#0d0d0d] border border-[#d2cfcd] p-2 w-full" @input="updatePrice">
             </div>
             <div class="mb-4">
               <p class="text-xl">Gesamtpreis: €{{ totalPrice }}</p>
@@ -68,7 +68,7 @@ export default {
       offers: [
         {
           name: 'Pluto',
-          image: 'https://via.placeholder.com/600x400?text=Pluto',
+          image: 'https://i.imgur.com/LWEbFNU.png',
           shortDescription: 'Erkunden Sie den Zwergplaneten.',
           description: 'Pluto bietet eine einzigartige Landschaft mit Eisbergen und geheimnisvollen Ebenen. Ein einmaliges Erlebnis in den Tiefen unseres Sonnensystems.',
           originalPrice: 200000,
@@ -76,7 +76,7 @@ export default {
         },
         {
           name: 'Venus',
-          image: 'https://via.placeholder.com/600x400?text=Venus',
+          image: 'https://i.imgur.com/UVM7XOy.png',
           shortDescription: 'Erleben Sie die Venus.',
           description: 'Die Venus, auch bekannt als Morgen- und Abendstern, bietet eine beeindruckende Atmosphäre und interessante geologische Formationen. Erforschen Sie die Geheimnisse unseres Zwillingsplaneten.',
           originalPrice: 120000,
@@ -84,7 +84,7 @@ export default {
         },
         {
           name: 'Jupiter',
-          image: 'https://via.placeholder.com/600x400?text=Jupiter',
+          image: 'https://i.imgur.com/2N2gNEh.png',
           shortDescription: 'Der größte Planet des Sonnensystems.',
           description: 'Erleben Sie die gigantischen Stürme und den großen roten Fleck des Jupiter. Ein Abenteuer auf dem größten Planeten unseres Sonnensystems.',
           originalPrice: 250000,

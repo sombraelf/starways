@@ -1,5 +1,5 @@
 <template>
-  <section class="planets bg-[#110d0f] text-[#d2cfcd] p-8">
+  <section class="planets bg-[#0d0d0d] text-[#d2cfcd] p-8">
     <h2 class="text-3xl font-bold text-center mb-8">Unsere Reiseziele</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
       <div v-for="planet in planets" :key="planet.id" class="planet-card border border-[#d2cfcd] p-4">
@@ -14,7 +14,7 @@
 
     <transition name="fade">
       <div v-if="selectedPlanet" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center p-4">
-        <div class="bg-[#110d0f] p-8 rounded-lg max-w-3xl w-full relative max-h-full overflow-y-auto">
+        <div class="bg-[#0d0d0d] p-8 rounded-lg max-w-3xl w-full relative max-h-full overflow-y-auto">
           <button @click="closeModal" class="absolute top-4 right-4 text-2xl text-white">&times;</button>
           <h3 class="text-2xl font-bold mb-4">{{ selectedPlanet.name }}</h3>
           <div class="mb-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -25,11 +25,11 @@
           <form @submit.prevent="bookTrip">
             <div class="mb-4">
               <label class="block mb-2">Reisedatum:</label>
-              <input type="date" v-model="bookingDetails.date" class="bg-[#110d0f] border border-[#d2cfcd] p-2 w-full">
+              <input type="date" v-model="bookingDetails.date" class="bg-[#0d0d0d] border border-[#d2cfcd] p-2 w-full">
             </div>
             <div class="mb-4">
               <label class="block mb-2">Flugklasse:</label>
-              <select v-model="bookingDetails.class" class="bg-[#110d0f] border border-[#d2cfcd] p-2 w-full" @change="updatePrice">
+              <select v-model="bookingDetails.class" class="bg-[#0d0d0d] border border-[#d2cfcd] p-2 w-full" @change="updatePrice">
                 <option value="Economy">Economy</option>
                 <option value="Business">Business</option>
                 <option value="First Class">First Class</option>
@@ -37,7 +37,7 @@
             </div>
             <div class="mb-4">
               <label class="block mb-2">Anzahl der Reisenden:</label>
-              <input type="number" v-model="bookingDetails.travelers" min="1" class="bg-[#110d0f] border border-[#d2cfcd] p-2 w-full" @input="updatePrice">
+              <input type="number" v-model="bookingDetails.travelers" min="1" class="bg-[#0d0d0d] border border-[#d2cfcd] p-2 w-full" @input="updatePrice">
             </div>
             <div class="mb-4">
               <p class="text-xl">Gesamtpreis: €{{ totalPrice }}</p>
@@ -60,11 +60,10 @@ export default {
         {
           id: 1,
           name: 'Mars',
-          image: 'https://via.placeholder.com/300x150?text=Mars',
+          image: 'https://i.imgur.com/2qDYih1.png',
           images: [
-            'https://via.placeholder.com/300x150?text=Mars+1',
-            'https://via.placeholder.com/300x150?text=Mars+2',
-            'https://via.placeholder.com/300x150?text=Mars+3'
+            'https://i.imgur.com/2qDYih1.png',
+            'https://i.imgur.com/GFaI2eH.png'
           ],
           shortDescription: 'Erkunden Sie den roten Planeten.',
           description: 'Der Mars, unser Nachbarplanet, bietet eine atemberaubende Landschaft mit seiner roten Oberfläche und faszinierenden Tälern. Erleben Sie unvergessliche Sonnenaufgänge und die Möglichkeit, in einer Weltraumkolonie zu wohnen.',
@@ -73,11 +72,10 @@ export default {
         {
           id: 2,
           name: 'Saturn',
-          image: 'https://via.placeholder.com/300x150?text=Saturn',
+          image: 'https://i.imgur.com/qJx9Dep.png',
           images: [
-            'https://via.placeholder.com/300x150?text=Saturn+1',
-            'https://via.placeholder.com/300x150?text=Saturn+2',
-            'https://via.placeholder.com/300x150?text=Saturn+3'
+            'https://i.imgur.com/qJx9Dep.png',
+            'https://i.imgur.com/jhHXK6W.png'
           ],
           shortDescription: 'Besuchen Sie die Ringe des Saturn.',
           description: 'Der Saturn ist bekannt für seine markanten Ringe. Genießen Sie den spektakulären Anblick der Ringe und entdecken Sie die zahlreichen Monde dieses gasförmigen Riesen.',
@@ -86,11 +84,10 @@ export default {
         {
           id: 3,
           name: 'Mond',
-          image: 'https://via.placeholder.com/300x150?text=Mond',
+          image: 'https://i.imgur.com/gZsODG1.png',
           images: [
-            'https://via.placeholder.com/300x150?text=Mond+1',
-            'https://via.placeholder.com/300x150?text=Mond+2',
-            'https://via.placeholder.com/300x150?text=Mond+3'
+            'https://i.imgur.com/gZsODG1.png',
+            'https://i.imgur.com/RUkKEe9.png'
           ],
           shortDescription: 'Ein Spaziergang auf dem Mond.',
           description: 'Unser nächstgelegener Himmelskörper bietet eine einzigartige Möglichkeit, auf seiner Oberfläche zu wandeln und die Erde von einer ganz neuen Perspektive zu sehen.',
@@ -99,11 +96,10 @@ export default {
         {
           id: 4,
           name: 'Venus',
-          image: 'https://via.placeholder.com/300x150?text=Venus',
+          image: 'https://i.imgur.com/UVM7XOy.png',
           images: [
-            'https://via.placeholder.com/300x150?text=Venus+1',
-            'https://via.placeholder.com/300x150?text=Venus+2',
-            'https://via.placeholder.com/300x150?text=Venus+3'
+            'https://i.imgur.com/UVM7XOy.png',
+            'https://i.imgur.com/v2LQM8f.png'
           ],
           shortDescription: 'Erleben Sie die Venus.',
           description: 'Die Venus, auch bekannt als Morgen- und Abendstern, bietet eine beeindruckende Atmosphäre und interessante geologische Formationen. Erforschen Sie die Geheimnisse unseres Zwillingsplaneten.',

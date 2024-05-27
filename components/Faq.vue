@@ -1,5 +1,5 @@
 <template>
-    <section class="faq bg-[#110d0f] text-[#d2cfcd] p-8">
+    <section class="faq bg-[#0d0d0d] text-[#d2cfcd] p-8">
       <h2 class="text-3xl font-bold text-center mb-8">Häufig gestellte Fragen</h2>
       <div class="max-w-3xl mx-auto space-y-4">
         <div v-for="faq in faqs" :key="faq.id" class="faq-item border-b border-white pb-4">

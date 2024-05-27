@@ -1,5 +1,5 @@
 <template>
-    <section class="newsletter bg-[#110d0f] text-[#d2cfcd] p-8 text-center">
+    <section class="newsletter bg-[#0d0d0d] text-[#d2cfcd] p-8 text-center">
       <h2 class="text-3xl font-bold mb-4">Abonnieren Sie unseren Newsletter</h2>
       <p class="mb-8">Bleiben Sie auf dem Laufenden mit den neuesten galaktischen Reisen und Angeboten!</p>
       <form @submit.prevent="subscribe">
@@ -7,7 +7,7 @@
           type="email" 
           v-model="email" 
           placeholder="Ihre E-Mail-Adresse" 
-          class="bg-[#110d0f] border border-[#d2cfcd] p-2 w-full max-w-md mb-4"
+          class="bg-[#0d0d0d] border border-[#d2cfcd] p-2 w-full max-w-md mb-4"
           required
         >
         <button type="submit" class="border border-[#d2cfcd] text-[#d2cfcd] px-4 py-2 hover:border-white hover:text-white">

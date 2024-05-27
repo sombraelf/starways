@@ -1,5 +1,5 @@
 <template>
-    <footer class="bg-[#110d0f] text-[#d2cfcd] p-8">
+    <footer class="bg-[#0d0d0d] text-[#d2cfcd] p-8">
       <div class="flex flex-col md:flex-row justify-between items-center">
         <div class="mb-4 md:mb-0">
           <h2 class="text-xl font-bold">Starways</h2>
